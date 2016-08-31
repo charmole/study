@@ -1,0 +1,251 @@
+@import '../LessLibrary/reset';
+@import '../LessLibrary/layout';
+
+@globalColor:#ed1c24;
+@globalWidth:1080px;
+
+.m-introduce{
+	width: 850px;position: relative;
+	.introduce-img{width: 850px;height: 315px;display: block;}
+	.upper-triangle{width: 0;height: 0;border-width: 11px;position: absolute;top: -20px;left: 48%;
+		border-left:20px solid transparent;border-right:20px solid transparent;
+		border-bottom: 25px solid #00b7ee;
+	}
+	.content{position: relative;width: 850px;height: 86px;background-color: #00b7ee;color: #fff;font-size: 16px;
+		line-height: 30px;text-align: center;padding-top: 20px;}
+	.img-circle{width: 145px;height: 145px;position: absolute;.boxradius(all,50%);
+		border: 10px solid #c3c3c3;top: 170px;left: 345px;z-index: 999;background-color: #fefefe;
+		text-align: center;
+		.name-font,.name{font-size: 28px;color: #b81c28;}
+		.name-font{margin-top:23px;}
+		i{font-size: 10px;color: #b81c28;margin-top:5px;display: block;}
+	}
+}
+
+.swiper-button-next-angle{right: 50px !important;top: 57% !important;
+		background-image:url('../imgs/swiper-button-next.png') !important}
+.swiper-button-prev-angle{left: 50px !important;top: 57% !important;
+		background-image:url('../imgs/swiper-button-prev.png') !important}
+
+.m-content{
+	width: 800px;margin: auto;text-align: left;margin-top: 40px;
+	.title{
+		font-size: 24px;color: #4c4c4c;font-weight: 600;line-height: 2.7em;
+		border-bottom: 1px solid #4c4c4c;
+	}
+	.content{margin-top: 10px;
+		font-size: 18px;color: #666666;line-height: 1.7em;
+	}
+}
+
+.g-header{margin: auto;position: relative;
+	height: 115px;width: @globalWidth;
+	.u-logo{display: block;height: 115px;width: 230px;background-color: #eee;text-align: center;
+		border-bottom: 11px solid #666;
+		.a-logo{padding-top: 20px;}
+	}
+	.navbar{width: 850px;font-size: 18px;position: absolute;right: 0;z-index: 999;
+		background: url('../imgs/line-end.png') 0 115px repeat-x;
+		.navbox{display: inline-block;position: relative;
+			.item{height: 126px;display: inline-block;padding:0 15px;color: #333;
+				font-weight: 700;line-height: 125px;
+				background: url('../imgs/line-1.png') bottom repeat-x;
+			}
+			.active{background: #0371d2;color: #fff;height: 126px;border-bottom: 11px solid #666;
+				z-index: 999;}
+			.item-1{background: url('../imgs/line-2.png') bottom repeat-x;}
+			.item-2{background: url('../imgs/line-3.png') bottom repeat-x;}
+			.item-3{background: url('../imgs/line-4.png') bottom repeat-x;}
+			.item-4{background: url('../imgs/line-5.png') bottom repeat-x;}
+			.item-5{background: url('../imgs/line-6.png') bottom repeat-x;}
+			.item-6{background: url('../imgs/line-7.png') bottom repeat-x;}
+			.item-7{background: url('../imgs/line-8.png') bottom repeat-x;}
+
+		.line-right{position: absolute;display: inline-block;height: 115px;width: 1px;
+			background-color: #eee;}
+		}
+
+
+		
+	}
+}
+
+.g-body{position: relative;
+	margin: auto;margin-top: -11px;width: @globalWidth;height:1624px;overflow: hidden;
+	.swiper-container{
+		width:@globalWidth;height:1624px;
+		.index-img{position: absolute;bottom: 0;}
+	}
+	.line-img{position: absolute;bottom: 0;left:0;}
+}
+
+.g-footer{margin: auto;width: @globalWidth;background-color: #f7f5f1;
+	.footer-wrap{
+		width: 880px;height: 120px;padding-top: 50px;margin: auto;
+		.footer-tel{text-align: center;
+			height: 65px;width: 298px;border-left: 1px solid #aaa9a9;border-right: 1px solid #aaa9a9;
+		}
+		.footer-add{
+			width: 395px;height: 65px;border-right: 1px solid #aaa9a9;
+			.add-place{margin-left: 28px;
+				.site{color:#1b1b1b;font-size: 12px;padding: 2px 10px;.boxradius(all,20px);border:1px solid #bfbfbf;}
+				.place{color: #333;font-size: 21px;margin-top: 10px;font-weight: 700;text-indent: 18px;}
+			}
+		}
+		.add-company{margin-left: 10px;
+			.name{font-size: 12px;color: #4c4c4c;line-height: 25px;}
+			.place{font-size: 14px;color: #333;margin-top: 10px;font-weight: 600;}
+		}
+		.footer-ercode{
+			text-align: center;margin-top: -6px;
+			.footer-ercode-img{display: block;}
+			.img-1{margin-top: 3px;margin-right: 13px;}
+		}
+	}
+}
+
+.g-header .navbar .navbox .itempa{padding: 0 8px;}
+//天使村概况
+.active-green{background-color: #82c446 !important;}
+.angle-introduce{margin: auto;
+	width:@globalWidth;height:1624px;background: url('../imgs/angle-introduce.jpg');
+	.introduce-1{
+		padding-top: 80px;
+	}
+	.introduce-2{
+		padding-top: 75px;
+		.img-circle{top:150px; }
+	}
+	.introduce-3{
+		padding-top: 70px;
+		.img-circle{top:150px;}
+	}
+}
+
+//弹出详情页面
+.detail-cnt{
+	width: 695px;margin: auto;margin-top: 45px;
+	.detail-title{line-height: 50px;border-bottom: 1px solid #9a9a9a;position: relative;
+		.title{font-size: 24px;color: #333;line-height: 50px;}
+		.line{position: absolute;bottom: -3px;width: 100px;height: 5px;background-color: #333;}
+	}
+	img{margin-top: 30px;}
+	p{margin-top: 30px;font-size: 18px;color: #4c4c4c;line-height: 1.7em;}
+}
+
+//金融大咖
+.active-red{background-color: #d3204a !important;}
+.finance-main{margin: auto;text-align: center;
+	width:@globalWidth;height:1624px;background: url('../imgs/angle-introduce.jpg');
+	.finance-logo{
+		margin-top: 50px;
+	}
+	.swiper-container{
+		width: 800px;height: 1100px;margin-top: 10px;
+		ul{margin-right: -55px;
+			.item{position: relative;text-align: left;float: left;
+			width: 244px;height: 324px;margin-bottom: 39px;margin-right: 35px;
+			.peo1-red{position: absolute;background: url('../imgs/finance-peobg.png') bottom no-repeat;
+				padding-left: 20px;width: 224px;height: 120px;bottom: 0;color: #fff;
+				.box{
+					.name{display: block;float: left;font-size: 22px;font-weight: normal;margin-top: 35px;
+					line-height: 1.8em;color: #e5e5e5;}
+					.position{margin-left: 15px;margin-top: 45px;display:block;float: left;padding: 1px 5px;.boxradius(all,20px);
+					font-size: 14px;border: 1px solid #bdbdbd;color: #d8af57;}
+				}
+				.title{font-size: 14px;line-height: 1.5em;color: #e5e5e5;margin-top: 7px;}
+				}
+			}
+		}
+	}
+}
+
+//天使村企业
+.active-yellow{background-color: #f7ab00 !important;}
+.company-main{margin: auto;text-align: center;
+	width:@globalWidth;height:1624px;background: url('../imgs/angle-introduce.jpg');
+	.company-logo{
+		margin-top: 50px;
+	}
+	.tabtitle{margin-top: 10px;
+		.tabtitle-ul{margin: auto;border: 1px solid #9a9a9a;width:500px;.boxradius(all,20px);
+			.angle-title{width: 250px;font-size: 24px;line-height: 1.8em;cursor: pointer;
+				color: #666;float: left;.boxradius(left,20px);}
+			.angle-title-1{width: 250px;font-size: 24px;line-height: 1.8em;cursor: pointer;
+				color: #666;float: left;.boxradius(right,20px);}
+			.active{background-color: #428fd3;color: #f8f8f8;}
+		}
+	}
+	.swiper-container{
+		width: 840px;height: 1100px;margin-top: 60px;
+		ul{margin-right: -30px;
+			li{
+				float: left;width: 258px;height: 161px;margin-bottom: 35px;margin-right: 30px;
+			}
+		}
+	}
+}
+
+//天使村活动
+.activity-main{margin: auto;text-align: center;
+	width:@globalWidth;height:1624px;background: url('../imgs/angle-introduce.jpg');
+	.activity-logo{
+		margin-top: 50px;
+	}
+	.swiper-container{
+		width: 830px;height: 1100px;margin-top: 75px;
+		ul{margin-right: -80px;
+			.item{position: relative;text-align: left;float: left;border-bottom: 1px dashed #707070;
+			width: 365px;height: 200px;margin-bottom: 50px;margin-right: 80px;
+				.title{font-size: 20px;color: #4c4c4c;font-weight: 700;}
+				.activity-more{display: block;margin: 20px 0;}
+				.content{max-height:90px;overflow: hidden; 
+					p{font-size: 14px;color: #4c4c4c;line-height: 1.7em;}
+				}
+			}
+		}
+	}
+}
+
+//金融服务
+.active-purple{background-color: #c42e99 !important;}
+.service-main{margin: auto;text-align: center;
+	width:@globalWidth;height:1624px;background: url('../imgs/angle-introduce.jpg');
+	.service-logo{
+		margin-top: 50px;
+	}
+	.m-content-service{margin-top: 50px;}
+	.service-bottom-img{margin-top: 101px;}
+}
+
+//天使村生活
+.life-main{margin: auto;text-align: center;
+	width:@globalWidth;height:1624px;background: url('../imgs/angle-introduce.jpg');
+	.life-logo{
+		margin-top: 50px;
+	}
+	.m-content-life{margin-top: 35px;
+			.title{color: #1b1b1b;border-bottom: 4px solid #4c4c4c;
+				.green{color: #82c446}
+				.blue{color: #004986}
+				.pink{color: #e4007f}
+				.yellow{color: #f79f17}
+		}
+		.content{margin-top: 20px;
+			font-size: 18px;color: #4c4c4c;line-height: 1.7em;
+		}
+	}
+	.m-content-life-1{margin-top: -50px;}
+	.life-bottom-img{margin-top: 50px;}
+}
+
+//关于我们
+.aboutUs-main{margin: auto;text-align: center;
+	width:@globalWidth;height:1624px;background: url('../imgs/angle-introduce.jpg');
+	.aboutUs-logo{
+		margin-top: 50px;
+	}
+	.m-content-aboutUs{margin-top: 40px;}
+	.m-content-aboutUs-1{margin-top: 0px;}
+	.aboutUs-bottom-img{margin-top: 0px;}
+}

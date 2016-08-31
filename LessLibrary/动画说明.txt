@@ -1,0 +1,124 @@
+/* **********************************************变形 ****************************/
+/* Transform Function */
+#transformFunction(g,@transformArg) {
+	-webkit-transform: @transformArg;
+	-moz-transform: @transformArg;
+	-o-transform: @transformArg;
+	-ms-transform: @transformArg;
+	transform: @transformArg;
+}
+#transformFunction(k,@transformArg) {
+	@{prefix}transform: @transformArg;
+}
+
+
+/* transform-origin  Function */
+#transformoriginFunction(k,@originx:left,@originy:top) {
+	@{prefix}transform-origin: @originx  @originy;
+}
+#transformoriginFunction(g,@originx:left,@originy:top) {
+	-webkit-transform-origin: @originx  @originy;
+	-moz-transform-origin: @originx  @originy;
+	-ms-transform-origin: @originx  @originy;
+	-o-transform-origin: @originx  @originy;
+	transform-origin: @originx  @originy;
+}
+/* ********************************************* 过渡  ****************************/
+/* Tanslation Function */
+#transitionFunction(@tanslatestyle:all,@speed:1s, @tranlatefunction:ease,@translateDelay:0s) {
+	-webkit-transition: @tanslatestyle @speed  @tranlatefunction @translateDelay;
+	-moz-transition: @tanslatestyle @speed  @tranlatefunction @translateDelay;
+	-o-transition: @tanslatestyle @speed  @tranlatefunction @translateDelay;
+	-ms-transition: @tanslatestyle @speed  @tranlatefunction @translateDelay;
+	transition: @tanslatestyle @speed  @tranlatefunction @translateDelay;
+}
+/* ********************************************* 动画  ****************************/
+/* animationFunction
+* @as_stylename : 动画名称
+* @as_duration ： 动画时长
+* @as_function ： 运动方式
+* @as_delay ： 延迟播放
+* @as_mode  ：检索或设置对象动画时间之外的状态 ；
+					none：
+					默认值。不设置对象动画之外的状态
+					forwards：
+					设置对象状态为动画结束时的状态
+					backwards：
+					设置对象状态为动画开始时的状态
+					both：
+					设置对象状态为动画结束或开始的状态
+*  @as_count ： 播放次数
+*  @as_direction ： 属性定义是否应该轮流反向播放动画    normal	默认值。动画应该正常播放。alternate	动画应该轮流反向播放。
+*/
+#animationFunction(@as_stylename,@as_duration:1s,@as_function:linear,@as_delay:0,@as_mode:both,@as_count:infinite,@as_direction:normal ) {
+	-webkit-animation-name: @as_stylename;
+	-webkit-animation-duration: @as_duration;
+	-webkit-animation-delay: @as_delay;
+	-webkit-animation-timing-function: @as_function;
+	-webkit-animation-fill-mode: @as_mode;
+	-webkit-animation-iteration-count: @as_count;
+	-webkit-animation-direction: @as_direction;
+	-moz-animation-name: @as_stylename;
+	-moz-animation-duration: @as_duration;
+	-moz-animation-delay: @as_delay;
+	-moz-animation-timing-function: @as_function;
+	-moz-animation-fill-mode: @as_mode;
+	-moz-animation-iteration-count: @as_count;
+	-moz-animation-direction: @as_direction;
+	-o-animation-name: @as_stylename;
+	-o-animation-duration: @as_duration;
+	-o-animation-delay: @as_delay;
+	-o-animation-timing-function: @as_function;
+	-o-animation-fill-mode: @as_mode;
+	-o-animation-iteration-count: @as_count;
+	-o-animation-direction: @as_direction;
+	-ms-animation-name: @as_stylename;
+	-ms-animation-duration: @as_duration;
+	-ms-animation-delay: @as_delay;
+	-ms-animation-timing-function: @as_function;
+	-ms-animation-fill-mode: @as_mode;
+	-ms-animation-iteration-count: @as_count;
+	-ms-animation-direction: @as_direction;
+	animation-name: @as_stylename;
+	animation-duration: @as_duration;
+	animation-delay: @as_delay;
+	animation-timing-function: @as_function;
+	animation-fill-mode: @as_mode;
+	animation-iteration-count: @as_count;
+	animation-direction: @as_direction;
+}
+#keyframesFunction(@name; @frameContent) {
+	@-webkit-keyframes  @name{
+		@prefix: -webkit-;
+		@frameContent();
+	}
+	@-moz-keyframes  @name{
+		@prefix: -moz-;
+		@frameContent();
+	}
+	@-o-keyframes  @name{
+		@prefix: -moz-;
+		@frameContent();
+	}
+	@-ms-keyframes  @name{
+		@prefix: -ms-;
+		@frameContent();
+	}
+	@keyframes  @name{
+		@prefix: ~'';
+		@frameContent();
+	}
+}
+
+/* example */
+/*
+.cssstuyle{
+	#transformFunction(g,rotate(5deg)); #animationFunction(weik);
+}
+
+@translatestyle: {
+0%{#transformFunction(k,rotate(30deg));}
+100%{ #transformFunction(k,rotate(60deg));}
+};
+
+#keyframesFunction(weik;@translatestyle);*/
